@@ -1,9 +1,9 @@
-@relation coursework_nominal-andrei
+@relation all-data-nominal
 
 @attribute checking_status {<0,0<=X<200,'no checking',>=200}
 @attribute credit_history {'critical/other existing credit','existing paid','delayed previously','no credits/all paid','all paid'}
-@attribute purpose {radio/tv,education,furniture/equipment,'new car','used car',business,'domestic appliance',repairs,other,retraining,eduction}
-@attribute credit_amount {0<=X<2000,4000<=X<6000,2000<=X<4000,6000<=X<8000,8000<=X<10000,12000<=X<14000,14000<=X<16000,10000<=X<12000,18000<=X<20000}
+@attribute purpose {radio/tv,education,furniture/equipment,'new car','used car',business,'domestic appliance',repairs,other,retraining}
+@attribute credit_amount {0<=X<2000,4000<=X<6000,2000<=X<4000,6000<=X<8000,8000<=X<10000,12000<=X<14000,14000<=X<16000,10000<=X<12000,16000<=X<19000}
 @attribute saving_status {'no known savings',<100,500<=X<1000,>=1000,100<=X<500}
 @attribute employment {>=7,1<=X<4,4<=X<7,unemployed,<1}
 @attribute personal_status {'male single','female div/sep/mar','male div/sep','male mar/wid'}
@@ -186,7 +186,7 @@
 'no checking','existing paid',furniture/equipment,0<=X<2000,<100,1<=X<4,'female div/sep/mar',19<=X<29,skilled,good
 0<=X<200,'delayed previously',furniture/equipment,2000<=X<4000,<100,unemployed,'female div/sep/mar',29<=X<39,'high qualif/self emp/mgmt',bad
 0<=X<200,'existing paid',radio/tv,0<=X<2000,<100,1<=X<4,'male single',29<=X<39,skilled,good
-<0,'delayed previously',eduction,2000<=X<4000,<100,<1,'male single',19<=X<29,skilled,bad
+<0,'delayed previously',education,2000<=X<4000,<100,<1,'male single',19<=X<29,skilled,bad
 'no checking','all paid','used car',6000<=X<8000,'no known savings',unemployed,'female div/sep/mar',49<=X<59,'high qualif/self emp/mgmt',bad
 <0,'existing paid',furniture/equipment,2000<=X<4000,<100,1<=X<4,'male div/sep',39<=X<49,skilled,good
 <0,'critical/other existing credit',radio/tv,0<=X<2000,500<=X<1000,>=7,'male single',49<=X<59,skilled,good
@@ -443,7 +443,7 @@
 'no checking','existing paid',furniture/equipment,0<=X<2000,<100,>=7,'male single',19<=X<29,skilled,good
 <0,'critical/other existing credit',repairs,0<=X<2000,<100,unemployed,'female div/sep/mar',49<=X<59,'unemp/unskilled non res',bad
 'no checking','existing paid',business,2000<=X<4000,<100,4<=X<7,'male single',69<=X<79,'unskilled resident',good
-0<=X<200,'existing paid',other,8000<=X<10000,<100,1<=X<4,'male single',29<=X<39,'high qualif/self emp/mgmt',bad
+0<=X<200,'existing paid',other,0<=X<2000,<100,1<=X<4,'male single',29<=X<39,'high qualif/self emp/mgmt',bad
 <0,'critical/other existing credit',furniture/equipment,0<=X<2000,<100,unemployed,'male single',29<=X<39,'high qualif/self emp/mgmt',good
 'no checking','critical/other existing credit',repairs,2000<=X<4000,<100,1<=X<4,'male div/sep',29<=X<39,skilled,good
 <0,'existing paid',furniture/equipment,2000<=X<4000,<100,1<=X<4,'male single',19<=X<29,skilled,good
@@ -455,7 +455,7 @@
 'no checking','existing paid','new car',0<=X<2000,<100,>=7,'male single',39<=X<49,'high qualif/self emp/mgmt',good
 <0,'existing paid',furniture/equipment,0<=X<2000,<100,1<=X<4,'female div/sep/mar',29<=X<39,skilled,good
 0<=X<200,'delayed previously',other,2000<=X<4000,<100,1<=X<4,'male single',29<=X<39,skilled,good
-'no checking','existing paid',education,6000<=X<8000,<100,>=7,'male single',39<=X<49,'unskilled resident',bad
+'no checking','existing paid',education,0<=X<2000,<100,>=7,'male single',39<=X<49,'unskilled resident',bad
 0<=X<200,'critical/other existing credit',furniture/equipment,4000<=X<6000,<100,1<=X<4,'female div/sep/mar',29<=X<39,'high qualif/self emp/mgmt',bad
 'no checking','critical/other existing credit',education,0<=X<2000,'no known savings',>=7,'female div/sep/mar',39<=X<49,'unskilled resident',good
 <0,'existing paid','new car',0<=X<2000,<100,<1,'female div/sep/mar',29<=X<39,skilled,bad
@@ -606,7 +606,7 @@
 0<=X<200,'delayed previously','new car',0<=X<2000,'no known savings',1<=X<4,'female div/sep/mar',39<=X<49,skilled,good
 'no checking','existing paid',business,0<=X<2000,>=1000,>=7,'female div/sep/mar',29<=X<39,'unskilled resident',good
 0<=X<200,'existing paid','new car',2000<=X<4000,<100,1<=X<4,'female div/sep/mar',19<=X<29,'unskilled resident',bad
-<0,'all paid',other,8000<=X<10000,'no known savings',>=7,'male single',39<=X<49,'high qualif/self emp/mgmt',bad
+<0,'all paid',other,0<=X<2000,'no known savings',>=7,'male single',39<=X<49,'high qualif/self emp/mgmt',bad
 0<=X<200,'all paid','new car',0<=X<2000,100<=X<500,<1,'female div/sep/mar',29<=X<39,'unskilled resident',bad
 <0,'existing paid','new car',0<=X<2000,<100,4<=X<7,'female div/sep/mar',19<=X<29,skilled,bad
 0<=X<200,'no credits/all paid',business,4000<=X<6000,<100,1<=X<4,'male single',29<=X<39,'unskilled resident',bad
@@ -927,7 +927,7 @@
 0<=X<200,'existing paid',radio/tv,2000<=X<4000,'no known savings',>=7,'female div/sep/mar',19<=X<29,skilled,good
 'no checking','existing paid',business,2000<=X<4000,>=1000,>=7,'male div/sep',19<=X<29,skilled,good
 <0,'all paid',business,2000<=X<4000,<100,1<=X<4,'male single',29<=X<39,skilled,bad
-0<=X<200,'no credits/all paid',other,18000<=X<20000,<100,1<=X<4,'female div/sep/mar',29<=X<39,'high qualif/self emp/mgmt',bad
+0<=X<200,'no credits/all paid',other,16000<=X<19000,<100,1<=X<4,'female div/sep/mar',29<=X<39,'high qualif/self emp/mgmt',bad
 'no checking','existing paid','used car',2000<=X<4000,100<=X<500,1<=X<4,'male single',29<=X<39,skilled,good
 <0,'existing paid','new car',14000<=X<16000,<100,>=7,'male single',59<=X<69,'high qualif/self emp/mgmt',bad
 <0,'existing paid',furniture/equipment,2000<=X<4000,100<=X<500,unemployed,'male div/sep',29<=X<39,skilled,bad
